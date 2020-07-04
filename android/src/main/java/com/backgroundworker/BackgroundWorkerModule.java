@@ -147,7 +147,7 @@ public class BackgroundWorkerModule extends ReactContextBaseJavaModule {
 
         p.resolve(request.getId().toString());
 
-        WorkManager.getInstance(context).enqueue(request);
+        WorkManager.getInstance(context).beginWith(request).enqueue();
 
     }
 
